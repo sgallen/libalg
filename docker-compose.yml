@@ -1,0 +1,12 @@
+version: '2'
+services:
+  lib:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - USER_UID
+        - USER_GID
+    command: ["python"]
+    volumes:
+      - .:/linalg
